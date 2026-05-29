@@ -28,9 +28,6 @@ network:
   allowed:
     - defaults
     - "*.tavily.com"
-
-gh-aw:
-  skip-pre-activation: true
 ---
 
 # Issue Quality Enhancer

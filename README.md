@@ -30,33 +30,11 @@ npm install
 npm run dev
 # → http://localhost:4321
 
-# Generate assets (8-bit avatars and cartridge covers)
-npm run generate:all
-
 # Production build
 npm run build
 
 # Preview build
 npm run preview
-```
-
-## 📁 Project Structure
-
-```
-src/
-├── components/     # Astro components
-│   ├── Console.astro        # Game Boy CSS
-│   ├── CartridgeCard.astro  # Talk cartridge
-│   └── BreakCartridge.astro # Break cartridge
-├── data/           # Talks and assets data
-├── layouts/        # Base layouts
-├── lib/            # Utilities and helpers
-├── pages/          # Web pages
-└── styles/         # Global styles
-scripts/
-├── fetch-agenda.ts      # Downloads event schedule
-├── generate-assets.ts   # Generates 8-bit avatars
-└── generate-covers.ts   # Generates cartridge covers
 ```
 
 ## 🎨 Design Credits (CodePen)

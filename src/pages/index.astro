@@ -1,0 +1,226 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CartridgeCard from '../components/CartridgeCard.astro';
+import Console from '../components/Console.astro';
+import { fleetWithAssets } from '../lib/fleet';
+
+const fleet = fleetWithAssets;
+
+const heroIndex = 0;
+const heroFleet = fleet[heroIndex] ?? fleet[0];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const rawHeroImage = heroFleet?.assets?.image ?? '/placeholders/cover.svg';
+const heroImage = rawHeroImage.startsWith('/') ? `${base}${rawHeroImage}` : rawHeroImage;
+
+const firstRow = fleet.slice(0, 3);
+const remainingFleet = fleet.slice(3);
+
+const qrCodeSrc = `${base}/assets/qr-code.png`;
+---
+
+<BaseLayout
+  title="Airline Fleet - choose your aircraft"
+  description="Explore our airline's fleet. Airbus A350, A330, A321, A320, A319, Embraer 190 y ATR 72."
+  currentPage="home"
+>
+  <!-- Hero: console (left) | title + first card row (right) -->
+  <section class="hero" id="home" aria-labelledby="site-title">
+    <div class="hero-left">
+      <Console avatarSrc={heroImage} name={heroFleet?.model} />
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-title-row">
+        <div class="hero-title">
+          <h1 id="site-title">Airline Fleet</h1>
+          <p class="event-name">Choose your aircraft</p>
+        </div>
+        <div class="qr-code-wrapper" title="Escanea para ver en móvil">
+          <img src={qrCodeSrc} alt="QR Code - Scan to view on mobile" class="qr-code" />
+          <span class="qr-label">📱 SCAN</span>
+        </div>
+      </div>
+
+      <div class="hero-cards" id="fleet">
+        {firstRow.map((f) => (
+          <CartridgeCard fleet={f} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Remaining fleet rows -->
+  <section class="speakers-panel" aria-label="More aircraft">
+    <div class="cartridge-grid">
+      {remainingFleet.map((f) => (
+        <CartridgeCard fleet={f} />
+      ))}
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const screen = document.getElementById('gameboy-screen') as HTMLImageElement;
+      const cartridges = document.querySelectorAll('.card-wrap[data-fleet-id]');
+      const display = document.querySelector('.display') as HTMLElement;
+
+      if (!screen || cartridges.length === 0 || !display) return;
+
+      const gameOverOverlay = document.createElement('div');
+      gameOverOverlay.className = 'game-over-overlay';
+      gameOverOverlay.innerHTML = `
+        <div class="game-over-text">GAME</div>
+        <div class="game-over-text">OVER</div>
+        <div class="game-over-hint">SELECT AIRCRAFT</div>
+      `;
+      display.appendChild(gameOverOverlay);
+
+      let sharedAudioCtx: AudioContext | null = null;
+
+      function getAudioContext(): AudioContext | null {
+        if (!sharedAudioCtx) {
+          try {
+            sharedAudioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
+          } catch (_) {
+            return null;
+          }
+        }
+        return sharedAudioCtx;
+      }
+
+      document.addEventListener('click', function unlockAudio() {
+        const ctx = getAudioContext();
+        if (ctx && ctx.state === 'suspended') ctx.resume();
+        document.removeEventListener('click', unlockAudio, true);
+      }, true);
+
+      function playGameOverSound() {
+        const audioCtx = getAudioContext();
+        if (!audioCtx || audioCtx.state !== 'running') return;
+
+        const notes = [523, 392, 330, 262];
+        const duration = 0.2;
+
+        notes.forEach((freq, i) => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+
+          osc.type = 'square';
+          osc.frequency.value = freq;
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+
+          const startTime = audioCtx.currentTime + (i * duration);
+          gain.gain.setValueAtTime(0.1, startTime);
+          gain.gain.exponentialRampToValueAtTime(0.01, startTime + duration);
+
+          osc.start(startTime);
+          osc.stop(startTime + duration);
+        });
+      }
+
+      function playInsertSound() {
+        const audioCtx = getAudioContext();
+        if (!audioCtx) return;
+
+        const play = () => {
+          const notes = [262, 330, 392, 523];
+          const duration = 0.1;
+
+          notes.forEach((freq, i) => {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.type = 'square';
+            osc.frequency.value = freq;
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            const startTime = audioCtx.currentTime + (i * duration);
+            gain.gain.setValueAtTime(0.08, startTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, startTime + duration);
+
+            osc.start(startTime);
+            osc.stop(startTime + duration);
+          });
+        };
+
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume().then(play);
+        } else {
+          play();
+        }
+      }
+
+      function showGameOver() {
+        gameOverOverlay.classList.add('visible');
+        screen.style.opacity = '0.2';
+        playGameOverSound();
+      }
+
+      function hideGameOver() {
+        gameOverOverlay.classList.remove('visible');
+        screen.style.opacity = '1';
+      }
+
+      function selectCartridge(card: HTMLElement, playSound = true) {
+        hideGameOver();
+
+        cartridges.forEach(c => c.classList.remove('is-selected'));
+
+        card.classList.add('is-selected');
+
+        const image = card.getAttribute('data-image');
+        const model = card.getAttribute('data-model');
+
+        if (image && screen) {
+          screen.style.opacity = '0';
+          setTimeout(() => {
+            screen.src = image;
+            screen.alt = model || '';
+            screen.style.opacity = '1';
+            if (playSound) playInsertSound();
+          }, 150);
+        }
+
+        if (window.innerWidth <= 1024 && display) {
+          display.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
+
+      cartridges.forEach(card => {
+        card.addEventListener('click', () => {
+          selectCartridge(card as HTMLElement, true);
+        });
+
+        (card as HTMLElement).style.cursor = 'pointer';
+      });
+
+      const firstCard = cartridges[0] as HTMLElement;
+      if (firstCard) {
+        firstCard.classList.add('is-selected');
+      }
+
+      let cartridgeManuallySelected = false;
+
+      cartridges.forEach(card => {
+        card.addEventListener('click', () => {
+          cartridgeManuallySelected = true;
+        });
+      });
+
+      const powerBtn = document.querySelector('.gb-wrap .power');
+      if (powerBtn) {
+        powerBtn.addEventListener('click', () => {
+          if (!cartridgeManuallySelected) {
+            setTimeout(() => {
+              showGameOver();
+            }, 3400);
+          }
+        });
+      }
+    });
+  </script>
+</BaseLayout>

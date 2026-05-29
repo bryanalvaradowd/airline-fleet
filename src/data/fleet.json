@@ -1,0 +1,352 @@
+{
+  "fleet": [
+    {
+      "id": "airbus-a350-900",
+      "model": "Airbus A350-900",
+      "shortDescription": "The flagship of our fleet with cutting-edge technology and maximum comfort.",
+      "description": "Flying on the new Finnair A350 is simply a pleasure. Thanks to the spacious cabin and advanced technology, you can sit comfortably, breath in fresh air with no draft and enjoy natural light flowing in through the large panoramic view windows. In addition, the A350 has better fuel-efficiency compared to other previous-generation aircraft. It truly is the flagship of our fleet!",
+      "specs": {
+        "numberOfAircraft": "18 + 1 on order",
+        "seatingCapacity": "278/321",
+        "length": "66.9m",
+        "wingSpan": "64.8m",
+        "cruisingSpeed": "900km/h",
+        "maxCruisingAltitude": "13,100m"
+      },
+      "seatDimensions": [
+        {
+          "travelClass": "Economy Class",
+          "seatPitch": "79 cm (31 in)",
+          "seatWidth": "On normal rows: 45 cm (18 in)",
+          "aisleArmrestsRise": "On 278 seat version on rows 32–39 and 52–66. On 321 seat version on rows 32-45 and 52-66",
+          "recline": "All seats recline",
+          "seatBeltLength": "107 cm (42 in)"
+        },
+        {
+          "travelClass": "Premium Economy",
+          "seatPitch": "96 cm (38 in)",
+          "seatWidth": "On normal rows: 46 cm (18 in)",
+          "aisleArmrestsRise": "On all rows",
+          "recline": "All seats recline",
+          "seatBeltLength": "118 cm (46 in)"
+        },
+        {
+          "travelClass": "Business Class",
+          "seatPitch": "—",
+          "seatWidth": "—",
+          "aisleArmrestsRise": "—",
+          "recline": "AirLounge seat",
+          "seatBeltLength": "120 cm (47 in)"
+        }
+      ],
+      "seatMaps": [
+        { "label": "Seat map, 321 seats", "url": "https://cms.finnair.com/resource/blob/2938298/1992efcbf391904c3d5e15f9278d04bc/A350_321_seats" },
+        { "label": "Seat map, 321 seats (3D view)", "url": "#3dseatmap/A350/galley" },
+        { "label": "Seat map, 278 seats", "url": "https://cms.finnair.com/resource/blob/2938330/612514d4cf799ae11c800bca2cf447db/A350_278_seats" }
+      ],
+      "productionDates": [
+        { "registration": "OH-LWA", "date": "2015-10-06" },
+        { "registration": "OH-LWB", "date": "2015-12-11" },
+        { "registration": "OH-LWC", "date": "2015-12-30" },
+        { "registration": "OH-LWD", "date": "2016-03-25" },
+        { "registration": "OH-LWE", "date": "2016-04-29" },
+        { "registration": "OH-LWF", "date": "2016-06-24" },
+        { "registration": "OH-LWG", "date": "2016-09-29" },
+        { "registration": "OH-LWH", "date": "2017-04-03" },
+        { "registration": "OH-LWI", "date": "2017-06-02" },
+        { "registration": "OH-LWK", "date": "2017-06-30" },
+        { "registration": "OH-LWL", "date": "2017-09-22" },
+        { "registration": "OH-LWM", "date": "2018-12-12" },
+        { "registration": "OH-LWN", "date": "2019-02-13" },
+        { "registration": "OH-LWO", "date": "2019-04-26" },
+        { "registration": "OH-LWP", "date": "2020-02-10" },
+        { "registration": "OH-LWR", "date": "2020-09-01" },
+        { "registration": "OH-LWS", "date": "2021-12-29" },
+        { "registration": "OH-LWT", "date": "2024-12-17" }
+      ]
+    },
+    {
+      "id": "airbus-a330-300",
+      "model": "Airbus A330-300",
+      "shortDescription": "Versatility and efficiency for long-haul routes.",
+      "description": "The Airbus A330 is a wide-body aircraft known for its reliability and efficiency on long-haul routes.",
+      "specs": {
+        "numberOfAircraft": "6",
+        "seatingCapacity": "279",
+        "length": "63.6m",
+        "wingSpan": "60.3m",
+        "cruisingSpeed": "890km/h",
+        "maxCruisingAltitude": "12,600m"
+      },
+      "seatDimensions": [
+        {
+          "travelClass": "Economy Class",
+          "seatPitch": "76–79 cm (30–31 in)",
+          "seatWidth": "On normal rows: 45 cm (18 in). On rows 62–67: 41–43cm (16–17 in)",
+          "aisleArmrestsRise": "Rows 32–43 and 52–67",
+          "recline": "All seats recline",
+          "seatBeltLength": "118 cm (46 in)"
+        },
+        {
+          "travelClass": "Premium Economy",
+          "seatPitch": "96 cm (38 in)",
+          "seatWidth": "On normal rows: 46 cm (18 in)",
+          "aisleArmrestsRise": "On all rows",
+          "recline": "All seats recline",
+          "seatBeltLength": "118 cm (46 in)"
+        },
+        {
+          "travelClass": "Business Class",
+          "seatPitch": "—",
+          "seatWidth": "—",
+          "aisleArmrestsRise": "—",
+          "recline": "AirLounge seat",
+          "seatBeltLength": "120 cm (47 in)"
+        }
+      ],
+      "seatMaps": [
+        { "label": "Seat map, 279 seats", "url": "https://cms.finnair.com/resource/blob/2938342/016e1a5e1a0b6ee495236bcd613e2339/A330_new_cabin" },
+        { "label": "Seat map, 279 seats (3D view)", "url": "#3dseatmap/A330/main" }
+      ],
+      "productionDates": [
+        { "registration": "OH-LTM", "date": "2009-03-26" },
+        { "registration": "OH-LTN", "date": "2009-04-24" },
+        { "registration": "OH-LTO", "date": "2009-05-15" },
+        { "registration": "OH-LTP", "date": "2009-06-18" },
+        { "registration": "OH-LTS", "date": "2010-02-11" },
+        { "registration": "OH-LTT", "date": "2010-04-15" }
+      ]
+    },
+    {
+      "id": "airbus-a321",
+      "model": "Airbus A321",
+      "shortDescription": "Perfect for short and medium-haul routes with high capacity.",
+      "description": "The Airbus A321 is a narrow-body aircraft optimized for short to medium-haul routes with excellent capacity.",
+      "specs": {
+        "numberOfAircraft": "14",
+        "seatingCapacity": "209",
+        "length": "44.51m",
+        "wingSpan": "34.1/35.8m",
+        "cruisingSpeed": "840km/h",
+        "maxCruisingAltitude": "11,900m"
+      },
+      "seatDimensions": [
+        {
+          "travelClass": "Economy Class",
+          "seatPitch": "74 cm (29 in)",
+          "seatWidth": "On normal rows: 45 cm (18 in). On rows 9 and 23: 42 cm (16 in). On rows 34–36: 43 cm (17 in)",
+          "aisleArmrestsRise": "On rows 2–9ABC, 11–23ABC and 25–36ABC",
+          "recline": "No recline on rows 9BCDE, 22EF and 23BCDE",
+          "seatBeltLength": "111 cm (44 in)"
+        },
+        {
+          "travelClass": "Business Class",
+          "seatPitch": "81 cm (32 in)",
+          "seatWidth": "45 cm (18 in) with the next seat empty",
+          "aisleArmrestsRise": "—",
+          "recline": "—",
+          "seatBeltLength": "111 cm (44 in)"
+        }
+      ],
+      "seatMaps": [
+        { "label": "Seat map", "url": "https://cms.finnair.com/resource/blob/2260216/69b3ec0ac365ed613d5d38ac5ca7d156/Seat%20map%20for%20A321-231" }
+      ],
+      "productionDates": [
+        { "registration": "OH-LZE", "date": "2003-05-28" },
+        { "registration": "OH-LZF", "date": "2004-04-19" },
+        { "registration": "OH-LZG", "date": "2013-09-05" },
+        { "registration": "OH-LZH", "date": "2013-10-17" },
+        { "registration": "OH-LZK", "date": "2014-02-10" },
+        { "registration": "OH-LZL", "date": "2014-04-30" },
+        { "registration": "OH-LZM", "date": "2017-02-23" },
+        { "registration": "OH-LZN", "date": "2017-03-20" },
+        { "registration": "OH-LZO", "date": "2017-04-06" },
+        { "registration": "OH-LZP", "date": "2017-05-08" },
+        { "registration": "OH-LZR", "date": "2017-11-17" },
+        { "registration": "OH-LZS", "date": "2017-12-29" },
+        { "registration": "OH-LZT", "date": "2017-12-15" },
+        { "registration": "OH-LZU", "date": "2018-07-25" }
+      ]
+    },
+    {
+      "id": "airbus-a320",
+      "model": "Airbus A320",
+      "shortDescription": "Efficiency and comfort for European routes.",
+      "description": "The Airbus A320 is a narrow-body aircraft that offers efficiency and comfort on European routes.",
+      "specs": {
+        "numberOfAircraft": "10",
+        "seatingCapacity": "174",
+        "length": "37.6m",
+        "wingSpan": "34.1m",
+        "cruisingSpeed": "840km/h",
+        "maxCruisingAltitude": "11,900m"
+      },
+      "seatDimensions": [
+        {
+          "travelClass": "Economy Class",
+          "seatPitch": "74 cm (29 in)",
+          "seatWidth": "On normal rows: 45 cm (18 in). On rows 28 and 29: 43 cm (17 in)",
+          "aisleArmrestsRise": "On rows 2–10ABC and 13–29ABC",
+          "recline": "No recline on rows 10AF and 11AF",
+          "seatBeltLength": "111 cm (44 in)"
+        },
+        {
+          "travelClass": "Business Class",
+          "seatPitch": "79 cm (31 in)",
+          "seatWidth": "45 cm (18 in) with the next seat empty",
+          "aisleArmrestsRise": "—",
+          "recline": "—",
+          "seatBeltLength": "111 cm (44 in)"
+        }
+      ],
+      "seatMaps": [
+        { "label": "Seat map", "url": "https://cms.finnair.com/resource/blob/2260122/39fdf05dbe0e6dae6189f4ec3e085af2/Seat%20map%20for%20A320" }
+      ],
+      "productionDates": [
+        { "registration": "OH-LXA", "date": "2001-02-28" },
+        { "registration": "OH-LXB", "date": "2001-05-28" },
+        { "registration": "OH-LXC", "date": "2001-09-07" },
+        { "registration": "OH-LXD", "date": "2001-10-30" },
+        { "registration": "OH-LXF", "date": "2002-02-28" },
+        { "registration": "OH-LXH", "date": "2003-01-16" },
+        { "registration": "OH-LXI", "date": "2003-05-05" },
+        { "registration": "OH-LXK", "date": "2003-09-16" },
+        { "registration": "OH-LXL", "date": "2003-12-19" },
+        { "registration": "OH-LXM", "date": "2004-02-06" }
+      ]
+    },
+    {
+      "id": "airbus-a319",
+      "model": "Airbus A319",
+      "shortDescription": "Ideal for regional routes with a more intimate cabin.",
+      "description": "The Airbus A319 is a narrow-body aircraft perfect for regional routes with a more intimate cabin.",
+      "specs": {
+        "numberOfAircraft": "5",
+        "seatingCapacity": "144",
+        "length": "33.8m",
+        "wingSpan": "34.1m",
+        "cruisingSpeed": "840km/h",
+        "maxCruisingAltitude": "11,900m"
+      },
+      "seatDimensions": [
+        {
+          "travelClass": "Economy Class",
+          "seatPitch": "74 cm (29 in)",
+          "seatWidth": "On normal rows: 45 cm (18 in). On row 24: 43 cm (17 in)",
+          "aisleArmrestsRise": "On rows 2–9ABC and 11–24ABC",
+          "recline": "No recline on rows 9AF and 10AF",
+          "seatBeltLength": "111 cm (44 in)"
+        },
+        {
+          "travelClass": "Business Class",
+          "seatPitch": "79 cm (31 in)",
+          "seatWidth": "45 cm (18 in) with the next seat empty",
+          "aisleArmrestsRise": "—",
+          "recline": "—",
+          "seatBeltLength": "111 cm (44 in)"
+        }
+      ],
+      "seatMaps": [
+        { "label": "Seat map", "url": "https://cms.finnair.com/resource/blob/2260410/d4963a82235f6944d0002ee3835ae56d/Seat%20map%20for%20A319" }
+      ],
+      "productionDates": [
+        { "registration": "OH-LVC", "date": "2000-08-31" },
+        { "registration": "OH-LVD", "date": "2000-10-31" },
+        { "registration": "OH-LVH", "date": "2000-01-21" },
+        { "registration": "OH-LVI", "date": "2000-11-30" },
+        { "registration": "OH-LVL", "date": "2004-09-02" }
+      ]
+    },
+    {
+      "id": "embraer-190",
+      "model": "Embraer 190",
+      "shortDescription": "Operated by Norra, perfect for Nordic regional routes.",
+      "description": "The Embraer 190 is a regional jet operated by Norra, offering comfort and efficiency on Nordic regional routes.",
+      "specs": {
+        "numberOfAircraft": "12 (operated by Norra)",
+        "seatingCapacity": "100",
+        "length": "36.2m",
+        "wingSpan": "28.7m",
+        "cruisingSpeed": "850km/h",
+        "maxCruisingAltitude": "12,300m"
+      },
+      "seatDimensions": [
+        {
+          "travelClass": "Economy Class",
+          "seatPitch": "79 cm (31 in)",
+          "seatWidth": "46 cm (18 in)",
+          "aisleArmrestsRise": "On rows 2–10 and 12–25",
+          "recline": "Pre-reclined on rows 10–25",
+          "seatBeltLength": "111 cm (44 in)"
+        },
+        {
+          "travelClass": "Business Class",
+          "seatPitch": "81 cm (32 in)",
+          "seatWidth": "46 cm (18 in)",
+          "aisleArmrestsRise": "—",
+          "recline": "—",
+          "seatBeltLength": "111 cm (44 in)"
+        }
+      ],
+      "seatMaps": [
+        { "label": "Seat map", "url": "https://cms.finnair.com/resource/blob/2260084/db1c7d2aef3d9eabf56fce9c95d9e41f/Seat%20map%20for%20E190" }
+      ],
+      "productionDates": [
+        { "registration": "OH-LKE", "date": "2006-12-14" },
+        { "registration": "OH-LKF", "date": "2007-03-28" },
+        { "registration": "OH-LKG", "date": "2007-05-02" },
+        { "registration": "OH-LKH", "date": "2007-06-27" },
+        { "registration": "OH-LKI", "date": "2007-10-15" },
+        { "registration": "OH-LKK", "date": "2007-11-21" },
+        { "registration": "OH-LKL", "date": "2008-02-27" },
+        { "registration": "OH-LKM", "date": "2008-03-27" },
+        { "registration": "OH-LKN", "date": "2009-02-12" },
+        { "registration": "OH-LKO", "date": "2009-03-26" },
+        { "registration": "OH-LKP", "date": "2011-03-16" },
+        { "registration": "OH-LKR", "date": "2011-05-17" }
+      ]
+    },
+    {
+      "id": "atr-72-500",
+      "model": "ATR 72-500",
+      "shortDescription": "Turboprop regional, operated by Norra for short routes.",
+      "description": "The ATR 72 is a turboprop aircraft operated by Norra, designed for short regional routes with excellent fuel efficiency.",
+      "specs": {
+        "numberOfAircraft": "12 (operated by Norra)",
+        "seatingCapacity": "68/70",
+        "length": "27.2m",
+        "wingSpan": "27.1m",
+        "cruisingSpeed": "463km/h",
+        "maxCruisingAltitude": "7,620m"
+      },
+      "seatDimensions": [
+        {
+          "travelClass": "Economy Class",
+          "seatPitch": "76 cm (30 in)",
+          "seatWidth": "On normal rows: 43 cm (17 in). On row 1 (exit row): 42 cm (17 in)",
+          "aisleArmrestsRise": "On rows 2–18",
+          "recline": "All seats pre-reclined",
+          "seatBeltLength": "111 cm (44 in)"
+        }
+      ],
+      "seatMaps": [
+        { "label": "Seat map, 68 seats", "url": "https://cms.finnair.com/resource/blob/2260326/fa58aa848a8a61efd511ef9fc528a467/Seat%20map%2068%20seats" },
+        { "label": "Seat map, 70 seats", "url": "https://cms.finnair.com/resource/blob/2260140/e3409b8d29fb72ebaee27192649edc5d/Seat%20map%2070%20seats" }
+      ],
+      "productionDates": [
+        { "registration": "OH-ATE", "date": "2007-01-30" },
+        { "registration": "OH-ATF", "date": "2007-03-16" },
+        { "registration": "OH-ATG", "date": "2007-10-15" },
+        { "registration": "OH-ATH", "date": "2007-11-19" },
+        { "registration": "OH-ATI", "date": "2008-11-19" },
+        { "registration": "OH-ATJ", "date": "2008-10-23" },
+        { "registration": "OH-ATK", "date": "2009-10-06" },
+        { "registration": "OH-ATL", "date": "2009-12-17" },
+        { "registration": "OH-ATM", "date": "2011-05-13" },
+        { "registration": "OH-ATN", "date": "2011-09-23" },
+        { "registration": "OH-ATO", "date": "2011-11-17" },
+        { "registration": "OH-ATP", "date": "2012-10-19" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "assets": [
+    {
+      "fleetId": "airbus-a350-900",
+      "image": "/assets/fleet/fleet-a350-image-data.png",
+      "cabinImage": "/assets/fleet/fleet-a350-cabin-image-data.jpg"
+    },
+    {
+      "fleetId": "airbus-a330-300",
+      "image": "/assets/fleet/fleet-a330-image-data.png"
+    },
+    {
+      "fleetId": "airbus-a321",
+      "image": "/assets/fleet/fleet-a321-image-data.png"
+    },
+    {
+      "fleetId": "airbus-a320",
+      "image": "/assets/fleet/fleet-a320-image-data.png"
+    },
+    {
+      "fleetId": "airbus-a319",
+      "image": "/assets/fleet/fleet-a319-image-data.png"
+    },
+    {
+      "fleetId": "embraer-190",
+      "image": "/assets/fleet/fleet-e190-image-data.png"
+    },
+    {
+      "fleetId": "atr-72-500",
+      "image": "/assets/fleet/fleet-atr-72-image-data.png"
+    }
+  ]
+}

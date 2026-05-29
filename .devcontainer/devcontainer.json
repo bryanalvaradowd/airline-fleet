@@ -1,5 +1,5 @@
 {
-  "name": "🎮 Finnair Fleet Retro Site",
+  "name": "🎮 Airline Fleet Retro Site",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
   "customizations": {
     "vscode": {

@@ -36,18 +36,18 @@ Automatically enhances new issues to be clear, well-structured, and easy to unde
 
 ## Issue to enhance
 
-| Field   | Value           |
-| ------- | --------------- |
-| Number  | #$ISSUE_NUMBER  |
-| Author  | @$ISSUE_AUTHOR  |
-| Title   | $ISSUE_TITLE    |
-| Body    | $ISSUE_BODY     |
+| Field  | Value          |
+| ------ | -------------- |
+| Number | #$ISSUE_NUMBER |
+| Author | @$ISSUE_AUTHOR |
+| Title  | $ISSUE_TITLE   |
+| Body   | $ISSUE_BODY    |
 
 ## Your tasks
 
 ### 1. Get context
 
-- Read the README to understand the project (it's a retro Game Boy style web for Finnair Fleet)
+- Read the README to understand the project (it's a retro Game Boy style web for Airline Fleet)
 - List the repository labels (you'll need them later)
 
 ### 2. Search for relevant references
@@ -63,6 +63,7 @@ Use the Tavily `search` tool to find useful information related to the issue:
 
 ```markdown
 ## 🔗 Useful References
+
 - [Resource Title](URL) - Brief description of why it's relevant
 ```
 
@@ -92,23 +93,29 @@ Use clear sections with emoji headers.
 
 ```markdown
 ## 🐛 Description
+
 (What is failing)
 
 ## 📋 Steps to reproduce
+
 1. ...
 2. ...
 3. ...
 
 ## ✅ Expected behavior
+
 (What should happen)
 
 ## ❌ Actual behavior
+
 (What really happens)
 
 ## 📸 Screenshots (if applicable)
+
 (Images or GIFs of the problem)
 
 ## 🔗 Useful references
+
 (Links found in search that can help resolve the bug)
 ```
 
@@ -116,18 +123,23 @@ Use clear sections with emoji headers.
 
 ```markdown
 ## ✨ Description
+
 (What to add or improve)
 
 ## 🎯 Why is it necessary?
+
 (Context and motivation)
 
 ## 📐 Proposed solution
+
 (How it could be implemented)
 
 ## 🔗 Useful references
+
 (Links to examples, documentation, or similar implementations)
 
 ## 📝 Additional notes
+
 (Any other relevant information)
 ```
 
@@ -135,15 +147,19 @@ Use clear sections with emoji headers.
 
 ```markdown
 ## 📝 Description
+
 (What documentation is missing or needs improvement)
 
 ## 📍 Location
+
 (Where the documentation should be)
 
 ## ✏️ Suggested content
+
 (What it should include)
 
 ## 🔗 Useful references
+
 (Reference documentation or examples from other projects)
 ```
 
@@ -151,7 +167,8 @@ Use clear sections with emoji headers.
 
 ```markdown
 ---
-> 🤖 *Issue automatically enhanced by Copilot. Original author: @$ISSUE_AUTHOR*
+
+> 🤖 _Issue automatically enhanced by Copilot. Original author: @$ISSUE_AUTHOR_
 ```
 
 ### 6. Apply changes

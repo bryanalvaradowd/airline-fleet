@@ -1,53 +1,53 @@
-# Reglas obligatorias para el agente
+# Mandatory Agent Rules
 
-## 1. GitHub Flow — SIEMPRE
+## 1. GitHub Flow — ALWAYS
 
-Cada vez que me pida implementar algo, cambiar código o hacer cualquier modificación:
+Every time you are asked to implement something, change code, or make any modification:
 
-1. **Crea una rama nueva** desde `main` con un nombre descriptivo (ej: `feature/descripcion-corta`, `fix/descripcion-corta`).
-2. **Haz commits claros y descriptivos** conforme avances.
-3. **Abre un Pull Request** para que pueda revisar tu código antes de fusionarlo.
-4. **NUNCA hagas push directo a `main`.**
+1. **Create a new branch** from `main` with a descriptive name (e.g., `feature/short-description`, `fix/short-description`).
+2. **Make clear and descriptive commits** as you progress.
+3. **Open a Pull Request** so I can review your code before merging it.
+4. **NEVER push directly to `main`.**
 
-> ⚠️ No empieces a modificar archivos sin haber creado la rama primero.
+> ⚠️ Do not start modifying files without creating the branch first.
 
-## 2. Navegador integrado — SIEMPRE
+## 2. Integrated Browser — ALWAYS
 
-Antes de implementar cualquier cambio visual o funcional:
+Before implementing any visual or functional change:
 
-1. **Comprueba si el servidor de desarrollo está corriendo** (`npm run dev` o similar).
-2. **Si no está corriendo, arráncalo.**
-3. **Abre el navegador integrado** para mostrar el estado actual.
-4. **Implementa los cambios.**
-5. **Muestra el resultado en el navegador** después de los cambios.
+1. **Check if the development server is running** (`npm run dev` or similar).
+2. **If it's not running, start it.**
+3. **Open the integrated browser** to show the current state.
+4. **Implement the changes.**
+5. **Show the result in the browser** after the changes.
 
-> ⚠️ No des por terminada una tarea visual sin haberla verificado en el navegador.
+> ⚠️ Do not consider a visual task complete without verifying it in the browser.
 
-## 3. Idioma — Español siempre, excepto el código
+## 3. Language — Spanish always, except for code
 
-- **Español:** commits, comentarios en el código, PRs, issues, respuestas al usuario, documentación.
-- **Inglés:** solo nombres de variables, funciones, clases, archivos y código en general.
+- **Spanish:** commits, code comments, PRs, issues, user responses, documentation.
+- **English:** only variable names, function names, class names, file names, and code in general.
 
-> ⚠️ No escribas mensajes de commit, comentarios ni descripciones de PR en inglés.
+> ⚠️ Do not write commit messages, comments, or PR descriptions in English.
 
-## 4. Agentes de IA — Proyecto Finnair Fleet
+## 4. AI Agents — Airline Fleet Project
 
-El proyecto es una web de selección de modelos de aviones de Finnair con estética retro Game Boy.
+The project is an Airline aircraft model selection website with a retro Game Boy aesthetic.
 
-### Agente Mobile Tester
+### Mobile Tester Agent
 
-El agente `mobile-tester.agent.md` verifica que la web se vea correctamente en dispositivos móviles.
+The `mobile-tester.agent.md` agent verifies that the website displays correctly on mobile devices.
 
-### Workflow agéntico issue-quality-enhancer
+### Issue-Quality-Enhancer Workflow
 
-Mejora automáticamente los issues abiertos con estructura, contexto web y etiquetas relevantes.
+Automatically improves open issues with structure, web context, and relevant labels.
 
-## 5. Agentic Workflows — Compilar siempre
+## 5. Agentic Workflows — Always Compile
 
-Cuando crees o modifiques un flujo agéntico (archivos `.md` en `.github/workflows/`):
+When you create or modify an agentic workflow (`.md` files in `.github/workflows/`):
 
-1. **Crea o edita el archivo `.md`** con la definición del workflow.
-2. **Ejecuta `gh aw compile`** para generar el workflow real de GitHub Actions.
-3. **Incluye los archivos generados** (`.github/aw/` y `.lock.yml`) en el commit.
+1. **Create or edit the `.md` file** with the workflow definition.
+2. **Run `gh aw compile`** to generate the actual GitHub Actions workflow.
+3. **Include the generated files** (`.github/aw/` and `.lock.yml`) in the commit.
 
-> ⚠️ Un flujo agéntico NO funciona hasta que se compile. No olvides este paso.
+> ⚠️ An agentic workflow does NOT work until it is compiled. Do not forget this step.

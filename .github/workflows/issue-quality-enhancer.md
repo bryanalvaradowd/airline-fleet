@@ -30,157 +30,157 @@ network:
     - "*.tavily.com"
 ---
 
-# Issue Quality Enhancer
+# Mejorador de Issues
 
-Automatically enhances new issues to be clear, well-structured, and easy to understand. Also searches for relevant web references to enrich the context.
+Mejora automáticamente los issues nuevos para que sean claros, estén bien estructurados y sean fáciles de entender. Además, busca referencias relevantes en la web para enriquecer el contexto.
 
-## Issue to enhance
+## Issue a mejorar
 
-| Field  | Value          |
+| Campo  | Valor          |
 | ------ | -------------- |
-| Number | #$ISSUE_NUMBER |
-| Author | @$ISSUE_AUTHOR |
-| Title  | $ISSUE_TITLE   |
-| Body   | $ISSUE_BODY    |
+| Número | #$ISSUE_NUMBER |
+| Autor  | @$ISSUE_AUTHOR |
+| Título | $ISSUE_TITLE   |
+| Cuerpo | $ISSUE_BODY    |
 
-## Your tasks
+## Tus tareas
 
-### 1. Get context
+### 1. Obtener contexto
 
-- Read the README to understand the project (it's a retro Game Boy style web for Airline Fleet)
-- List the repository labels (you'll need them later)
+- Lee el README para entender el proyecto (es una web estilo Game Boy retro para JSConf España 2026)
+- Lista las etiquetas del repositorio (las necesitarás después)
 
-### 2. Search for relevant references
+### 2. Buscar referencias relevantes
 
-Use the Tavily `search` tool to find useful information related to the issue:
+Usa la herramienta `search` de Tavily para encontrar información útil relacionada con el issue:
 
-- Search for articles, documentation, or resources that can help resolve or better understand the problem
-- Focus on technologies mentioned in the issue (Astro, TypeScript, CSS, etc.)
-- If it's a bug, search for known solutions or similar issues in other projects
-- If it's an enhancement, search for implementation examples or best practices
+- Busca artículos, documentación o recursos que puedan ayudar a resolver o entender mejor el problema
+- Enfócate en tecnologías mencionadas en el issue (Astro, TypeScript, CSS, etc.)
+- Si es un bug, busca soluciones conocidas o issues similares en otros proyectos
+- Si es una mejora, busca ejemplos de implementaciones o buenas prácticas
 
-**Format for found references:**
+**Formato de las referencias encontradas:**
 
 ```markdown
-## 🔗 Useful References
+## 🔗 Referencias útiles
 
-- [Resource Title](URL) - Brief description of why it's relevant
+- [Título del recurso](URL) - Breve descripción de por qué es relevante
 ```
 
-> ⚠️ Only include references if they are truly useful for the issue. Don't add generic links.
+> ⚠️ Solo incluye referencias si son realmente útiles para el issue. No añadas enlaces genéricos.
 
-### 3. Improve the title
+### 3. Mejorar el título
 
-Add an emoji as a prefix according to the issue type:
+Añade un emoji como prefijo según el tipo de issue:
 
-- 🐛 Bug (something not working)
-- ✨ Enhancement (new improvement or feature)
-- 📝 Documentation (docs, README)
-- ❓ Question (question or doubt)
-- 🕹️ Retro-UI (interface and site aesthetics)
-- 🖼️ Covers (covers and visual composition)
-- 👤 Avatars (avatars and pixel-art)
-- 📅 Agenda-data (agenda data)
-- ⚙️ Build-pipeline (scripts and automation)
+- 🐛 Bug (algo no funciona)
+- ✨ Enhancement (nueva mejora o funcionalidad)
+- 📝 Documentation (documentación, README)
+- ❓ Question (pregunta o duda)
+- 🕹️ Retro-UI (interfaz y estética del sitio)
+- 🖼️ Covers (carátulas y composición visual)
+- 👤 Avatars (avatares y pixel-art)
+- 📅 Agenda-data (datos de la agenda)
+- ⚙️ Build-pipeline (scripts y automatización)
 
-Example: `🐛 Error loading speaker avatar`
+Ejemplo: `🐛 Error al cargar el avatar del speaker`
 
-### 4. Restructure the body
+### 4. Reestructurar el cuerpo
 
-Use clear sections with emoji headers.
+Usa secciones claras con encabezados emoji.
 
-**For bugs:**
+**Para bugs:**
 
 ```markdown
-## 🐛 Description
+## 🐛 Descripción
 
-(What is failing)
+(Qué está fallando)
 
-## 📋 Steps to reproduce
+## 📋 Pasos para reproducir
 
 1. ...
 2. ...
 3. ...
 
-## ✅ Expected behavior
+## ✅ Comportamiento esperado
 
-(What should happen)
+(Qué debería pasar)
 
-## ❌ Actual behavior
+## ❌ Comportamiento actual
 
-(What really happens)
+(Qué pasa realmente)
 
-## 📸 Screenshots (if applicable)
+## 📸 Capturas (si aplica)
 
-(Images or GIFs of the problem)
+(Imágenes o GIFs del problema)
 
-## 🔗 Useful references
+## 🔗 Referencias útiles
 
-(Links found in search that can help resolve the bug)
+(Enlaces encontrados en la búsqueda que puedan ayudar a resolver el bug)
 ```
 
-**For enhancements/features:**
+**Para mejoras/features:**
 
 ```markdown
-## ✨ Description
+## ✨ Descripción
 
-(What to add or improve)
+(Qué se quiere añadir o mejorar)
 
-## 🎯 Why is it necessary?
+## 🎯 ¿Por qué es necesario?
 
-(Context and motivation)
+(Contexto y motivación)
 
-## 📐 Proposed solution
+## 📐 Solución propuesta
 
-(How it could be implemented)
+(Cómo se podría implementar)
 
-## 🔗 Useful references
+## 🔗 Referencias útiles
 
-(Links to examples, documentation, or similar implementations)
+(Enlaces a ejemplos, documentación o implementaciones similares)
 
-## 📝 Additional notes
+## 📝 Notas adicionales
 
-(Any other relevant information)
+(Cualquier otra información relevante)
 ```
 
-**For documentation:**
+**Para documentación:**
 
 ```markdown
-## 📝 Description
+## 📝 Descripción
 
-(What documentation is missing or needs improvement)
+(Qué documentación falta o hay que mejorar)
 
-## 📍 Location
+## 📍 Ubicación
 
-(Where the documentation should be)
+(Dónde debería estar la documentación)
 
-## ✏️ Suggested content
+## ✏️ Contenido sugerido
 
-(What it should include)
+(Qué debería incluir)
 
-## 🔗 Useful references
+## 🔗 Referencias útiles
 
-(Reference documentation or examples from other projects)
+(Documentación de referencia o ejemplos de otros proyectos)
 ```
 
-### 5. Add footer
+### 5. Añadir pie de página
 
 ```markdown
 ---
 
-> 🤖 _Issue automatically enhanced by Copilot. Original author: @$ISSUE_AUTHOR_
+> 🤖 _Issue mejorado automáticamente por Copilot. Autor original: @$ISSUE_AUTHOR_
 ```
 
-### 6. Apply changes
+### 6. Aplicar cambios
 
-- **Update** issue #$ISSUE_NUMBER with the new title and body
-- **Assign** 1-3 relevant labels from the available ones in the repository
-- **Comment** with a brief summary of the improvements made
+- **Actualiza** el issue #$ISSUE_NUMBER con el nuevo título y cuerpo
+- **Asigna** 1-3 etiquetas relevantes de las disponibles en el repositorio
+- **Comenta** con un breve resumen de las mejoras realizadas (en español)
 
-## Rules
+## Reglas
 
-- Never change the original meaning of the issue
-- If the issue is already well-written, make minimal changes
-- Keep content useful, not verbose
-- All content should be in English
-- Respect the retro/gaming style of the project in comments
+- Nunca cambies el significado original del issue
+- Si el issue ya está bien escrito, haz cambios mínimos
+- Mantén el contenido útil, no verboso
+- Todo el contenido debe estar en español
+- Respeta el estilo retro/gaming del proyecto en los comentarios

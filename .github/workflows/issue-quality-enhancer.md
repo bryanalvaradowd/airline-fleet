@@ -18,10 +18,8 @@ tools:
 
 mcp-servers:
   tavily:
-    command: npx
-    args: ["-y", "@tavily/mcp-server"]
-    env:
-      TAVILY_API_KEY: "${{ secrets.TAVILY_API_KEY }}"
+    type: http
+    url: "https://mcp.tavily.com/mcp/?tavilyApiKey=${{ secrets.TAVILY_API_KEY }}"
     allowed: ["search"]
 
 network:

@@ -64,6 +64,7 @@ const githubPageUrl = 'https://bryanalvaradowd.github.io/airline-fleet'
       const screen = document.getElementById('gameboy-screen') as HTMLImageElement;
       const cartridges = document.querySelectorAll('.card-wrap[data-fleet-id]');
       const display = document.querySelector('.display') as HTMLElement;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       if (!screen || cartridges.length === 0 || !display) return;
 
@@ -185,9 +186,9 @@ const githubPageUrl = 'https://bryanalvaradowd.github.io/airline-fleet'
         }
 
         if (window.innerWidth <= 1024 && display) {
-          display.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          display.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
         } else {
-          card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          card.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest' });
         }
       }
 

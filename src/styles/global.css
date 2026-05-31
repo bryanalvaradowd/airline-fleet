@@ -117,6 +117,37 @@ main {
   );
   opacity: 0.3;
   z-index: 9999;
+  animation: crt-scanline 0.2s steps(2, end) infinite;
+}
+
+.crt::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: rgba(12, 2, 67, 0.06);
+  animation: crt-flicker 0.16s steps(2, end) infinite;
+}
+
+@keyframes crt-flicker {
+  0%,
+  100% {
+    opacity: 0.14;
+  }
+  50% {
+    opacity: 0.08;
+  }
+}
+
+@keyframes crt-scanline {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1px);
+  }
 }
 
 /* ───────────── Window chrome ───────────── */
@@ -541,17 +572,24 @@ main {
 ───────────────────────────────────────────────── */
 .card-wrap {
   transition:
-    transform 0.2s ease,
-    filter 0.2s ease;
+    transform 0.12s steps(3, end),
+    filter 0.12s steps(3, end),
+    box-shadow 0.12s steps(3, end);
 }
 
 .card-wrap:hover {
   transform: translateY(-4px) scale(1.02);
+  box-shadow:
+    0 0 0 2px rgba(200, 240, 176, 0.9),
+    0 0 0 6px rgba(30, 110, 58, 0.5);
 }
 
 .card-wrap.is-selected {
   transform: translateY(-8px) scale(1.05);
   filter: drop-shadow(0 8px 16px rgba(24, 20, 88, 0.4));
+  box-shadow:
+    0 0 0 2px rgba(200, 240, 176, 0.95),
+    0 0 0 6px rgba(30, 110, 58, 0.7);
 }
 
 .card-wrap.is-selected::after {
@@ -571,7 +609,7 @@ main {
 
 /* Screen image transition */
 .screen-img {
-  transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s steps(3, end);
 }
 
 /* ─────────────────────────────────────────────────
@@ -590,7 +628,7 @@ main {
   background: #0c0243;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.18s steps(3, end);
   z-index: 100;
 }
 
@@ -605,7 +643,7 @@ main {
   text-shadow:
     2px 2px 0 #7e1f89,
     0 0 10px #8f2591;
-  animation: game-over-blink 1s ease-in-out infinite;
+  animation: game-over-blink 1s steps(2, end) infinite;
 }
 
 .game-over-hint {
@@ -613,7 +651,7 @@ main {
   font-size: 8px;
   color: #e4e4ee;
   margin-top: 16px;
-  animation: game-over-pulse 2s ease-in-out infinite;
+  animation: game-over-pulse 2s steps(2, end) infinite;
 }
 
 @keyframes game-over-blink {
@@ -639,5 +677,21 @@ main {
 @media (max-width: 768px) {
   .hero-title-row {
     align-items: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .crt::before,
+  .crt::after {
+    animation: none !important;
   }
 }
